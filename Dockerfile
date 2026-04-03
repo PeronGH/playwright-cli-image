@@ -1,5 +1,5 @@
-FROM mcr.microsoft.com/playwright:v1.58.2-noble
+FROM node:lts-slim
 
-RUN npm install -g @playwright/cli@latest
+RUN npm install -g @playwright/cli@latest && npx playwright install --with-deps chrome
 
 CMD ["sleep", "infinity"]
