@@ -9,4 +9,6 @@ RUN PW_CORE=$(npm ls -g playwright-core --parseable) \
 
 RUN npx playwright install --with-deps chrome
 
+COPY cli.config.json /.playwright/cli.config.json
+
 CMD ["sleep", "infinity"]
